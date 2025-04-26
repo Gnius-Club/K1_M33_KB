@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Misión 33</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #5DADE2; /* Azul Gnius */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .banner {
+            background-color: #85C1E9; /* Azul más claro */
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .banner:hover {
+            background-color: #AED6F1;
+        }
+        .banner .title {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 8px;
+            border-top: 1px solid #fff;
+            padding-top: 8px;
+            color: #1A5276; /* Azul oscuro texto */
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #EAF2F8; /* Azul muy claro fondo */
+            border-radius: 5px;
+        }
+        .dialogue {
+            background-color: #FEF9E7; /* Amarillo pálido para diálogo */
+            border: 1px solid #FAD7A0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: left; /* Cambiado a izquierda para mejor lectura */
+            font-style: italic;
+            color: #784212; /* Marrón oscuro texto */
+            position: relative; /* Para el bocadillo */
+            border-left: 5px solid #F39C12; /* Naranja */
+        }
+
+        .dropdown {
+            margin-bottom: 25px;
+            text-align: center; /* Centrar dropdown */
+        }
+        .dropdown label {
+            font-weight: bold;
+            color: #1A5276;
+        }
+        .dropdown select {
+            font-size: 1.1em;
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #85C1E9;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+        td { padding: 12px; border: 1px solid #AED6F1; vertical-align: top; }
+        td strong { color: #1A5276; }
+        .level-title { /* Clase específica para el título del nivel */
+             text-align: center;
+             color: #5DADE2;
+             font-size: 1.4em;
+             margin-bottom: 20px;
+        }
+        /* Clases para ocultar/mostrar contenido por nivel */
+        .k1-content, .k2-content, .k3-content { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Playbook - Misión 33: El Patrón Secreto del Templo Perdido</h1>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1 (3 años)</option>
+                <option value="K2">K2 (4 años)</option>
+                <option value="K3">K3 (5 años)</option>
+            </select>
+        </div>
+
+        <h2 id="selected-level" class="level-title">Nivel: K1 (3 años)</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0: Revisión de Materiales -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales</div>
+        <div class="subtitle">Objetivo: Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Revisa que tengas listos los materiales indicados en la **DIAPOSITIVA 1**: 1 Kinderbot y 10 iBricks por cada pareja (idealmente, iBricks de 2 colores o usar orientación parado/acostado). Kinderbots cargados.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1: Bienvenida e Introducción -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: ¡Exploradores de Patrones! ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Objetivo: Recordar el concepto de patrón simple (AB) y presentar la idea de patrones un poco más complejos (AAB/ABB).</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 2** “Bienvenida”. Saluda y recuerda cómo siguieron el patrón AB en el Jardín Mágico.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Hola, intrépidos exploradores del CODE SQUAD! ¿Recuerdan cómo ayudamos a Kinderbot a seguir el camino secreto del Jardín Mágico con el patrón Rojo-Azul-Rojo-Azul? ¡Fueron geniales detectando ese patrón AB! Pues hoy... ¡la aventura continúa! ¡Vamos a explorar patrones un poquito diferentes, un poquito más misteriosos!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 3** "Gimnasio CODE SQUAD". Explica que afinarán sus habilidades de detective de patrones para encontrar secuencias nuevas.</td>
+                <td>
+                     <div class="dialogue">
+                        "Para descifrar estos nuevos patrones secretos, ¡nuestros ojos de explorador tienen que estar súper entrenados! ¡Necesitamos poder ver el orden escondido! Vamos a nuestro Gimnasio Cerebral para una sesión especial de ¡Búsqueda de Patrones Avanzada! ¡La canción nos dará pistas!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Baile de Algoritmos -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-algoritmos')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Objetivo: Practicar secuencias con repeticiones variadas (ej. dos pasos iguales seguidos de uno diferente) a través del baile.</div>
+    </div>
+    <div id="baile-algoritmos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 4** “Baile de Algoritmos”. Guía el baile, destacando si hay secuencias tipo AAB o ABB en los movimientos.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores, a bailar! Este Baile de Algoritmos es especial. A veces haremos dos pasos iguales y luego uno diferente, ¡como A-A-B! O quizás uno, y luego dos iguales, ¡como A-B-B! ¡Escuchen bien la música y sigan el ritmo de estos nuevos patrones! ¡Adelante, adelante, gira! O ¡Adelante, gira, gira! ¡Vamos a practicar!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Planteamiento del Problema - El Templo Perdido -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">🏛️ Actividad 3: El Secreto del Templo Perdido ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Presentar la historia, introducir visualmente los patrones AAB/ABB con iBricks y definir el reto de programar la secuencia.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 5**. Narra la historia del Templo Perdido y el camino con un patrón especial para abrir la puerta secreta.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡CODE SQUAD, hemos encontrado un mapa antiguo! ¡Nos lleva a un Templo Perdido en medio de la jungla, lleno de tesoros y secretos! Pero para entrar, hay una puerta mágica que solo se abre si seguimos un camino especial en el suelo. ¡Este camino tiene un patrón secreto diferente al que conocemos! Miren con atención..."
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 6**. Muestra un patrón AAB (o ABB para K3) con iBricks (color u orientación). Explica que Kinderbot debe seguir esta secuencia exacta para abrir la puerta.</td>
+                <td>
+                     <div class="dialogue">
+                        "(Muestra patrón AAB, ej. Rojo-Rojo-Azul o Parado-Parado-Acostado). ¡Este es el secreto! A veces hay dos bloques iguales seguidos (Rojo-Rojo / Parado-Parado) y luego uno diferente (Azul / Acostado). ¡O quizás uno diferente y luego dos iguales! (Muestra patrón ABB si es para K3). ¡Este es el código AAB (o ABB)! Kinderbot tiene que caminar sobre los bloques siguiendo este orden exacto: Avanza, Avanza, Gira... ¡o como sea el patrón! Si lo hacemos bien, ¡la puerta secreta del templo se abrirá! ¿Listos para descifrar el patrón del Templo Perdido?"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Formación de Parejas -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: ¡Equipos de Exploradores! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Formar parejas para analizar el patrón, construir el camino y planificar la secuencia de Kinderbot.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 7** “Formación de Equipos”. Explica que descifrar patrones nuevos es más fácil entre dos exploradores. Forma las parejas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Exploradores! ¡Descifrar el código de un Templo Perdido es un trabajo para los mejores equipos! ¡Dos pares de ojos atentos pueden ver el patrón secreto más rápido! ¡Y dos cerebros pensando juntos pueden programar a Kinderbot a la perfección! ¡Formen sus Equipos de Exploradores del Templo! ¡Encuentren a su compañero de aventuras!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos tengan pareja. Anímales a observar bien el patrón que construirán y planear los pasos.</td>
+                <td>
+                     <div class="dialogue">
+                        "¿Equipos listos? ¡Genial! Ahora, miren bien los bloques. ¿Cuál es el patrón? ¿Se repiten dos iguales y uno diferente (AAB)? ¿O uno diferente y dos iguales (ABB)? ¡Construyan el camino juntos y planeen los pasos de Kinderbot! ¡El tesoro del templo espera!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5: Reto de Codificación - ¡Programando el Patrón AAB/ABB! -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('reto-codificacion')">
+        <div class="title">⌨️ Actividad 5: ¡Descifrando el Código del Templo! ⏰ Tiempo: 6 minutos</div>
+        <div class="subtitle">Objetivo: Construir el camino con patrón AAB/ABB y programar la secuencia correspondiente de Kinderbot según el nivel.</div>
+    </div>
+    <div id="reto-codificacion" class="content">
+        <table>
+            <!-- Paso Común: Construir y Repasar Botones -->
+             <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la **DIAPOSITIVA 8** "¡A Construir y Recordar!". Guía la construcción del camino con iBricks según el patrón AAB/ABB del nivel. Repasa botones Adelante y Girar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores, a construir el camino secreto del templo con sus bloques! Recuerden el patrón: ¿AAB o ABB? ¡Coloquen los bloques en fila! (Supervisa la construcción). ¡Perfecto! Y no olvidemos los botones de Kinderbot: Adelante para avanzar sobre un bloque, Girar para cambiar la dirección hacia el siguiente. ¡Listos para programar!"
+                    </div>
+                </td>
+            </tr>
+            <!-- Contenido Específico por Nivel -->
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 2 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 9** "Misión K1: Patrón AAB Corto". Guía para construir patrón AAB (3 bloques) y programar 3 pasos (ej. Adelante, Adelante, Girar).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! Su patrón es AAB (ej. Rojo-Rojo-Azul o Parado-Parado-Acostado). ¡Construyan el camino con 3 bloques! Ahora, el código: Paso 1 (sobre A) -> ¡Adelante! Paso 2 (sobre el otro A) -> ¡Adelante! Paso 3 (para mirar a B) -> ¡Girar! Código: Adelante, Adelante, Girar. ¡Preparen el código, pero sin presionar 'Go' todavía!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                <td><strong>PASO 2 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 10** "Misión K2: Patrón AAB Extendido". Guía para construir AABAA (5 bloques) y programar 4-5 pasos (ej. A, A, G, A, G o A, A, G, A, A).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores K2! Su camino es más largo: AABAA (ej. Rojo-Rojo-Azul-Rojo-Rojo). ¡Necesitan 5 bloques! (Demuestra). El código para seguirlo: Avanza (A), Avanza (A), Gira (hacia B), Avanza (B)... ¡Ups! ¡Me equivoqué! El patrón es AABAA. Sería: Avanza (A), Avanza (A), Gira (hacia B), Avanza (B), Gira (hacia A). ¡Son 5 pasos! (Demuestra A-A-G-A-G). ¡Preparen su código! ¡Sin 'Go' aún!"
+                    </div>
+                </td>
+            </tr>
+            <!-- K3 -->
+             <tr class="k3-content">
+                <td><strong>PASO 2 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 11** "Misión K3: Patrón ABB y Predicción". Guía para construir patrón ABBABB (6 bloques) y programar 5-6 pasos (ej. A, G, A, A, G, A o A, G, B, B, G, B...). Pedir predicción.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros Exploradores K3! ¡Su desafío es el patrón ABBABB! (ej. Rojo-Azul-Azul-Rojo-Azul-Azul). ¡Necesitan 6 bloques! (Demuestra). ¡Programen la secuencia completa! Avanza (A), Gira (hacia B), Avanza (B), Avanza (B), Gira (hacia A)... ¡Calculen los 6 pasos! (ej. A, G, B, B, G, A). ¡Preparen el código! Y la pregunta del millón: si el camino siguiera, ¿qué bloque vendría después del último 'B'? (Espera respuesta: 'A'). ¡Increíble! ¡Preparen el código, sin activar 'Go'!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6: ¡Abriendo la Puerta Secreta! -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('probando-patron')">
+        <div class="title">🚀 Actividad 6: ¡Siguiendo el Patrón del Templo! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Ejecutar el código, observar si Kinderbot sigue el patrón AAB/ABB construido y reforzar la habilidad de identificar y extender patrones.</div>
+    </div>
+    <div id="probando-patron" class="content">
+        <table>
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 1 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 12** "¡Éxito K1!". Anima a poner a Kinderbot al inicio del patrón AAB y presionar 'Go'. Observar si completa los 3 pasos. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Coloquen a Kinderbot al inicio de su camino AAB! ¿Listos con el código 'Adelante, Adelante, Girar'? ¡Presionen 'Go'! ¡Miren! Avanza sobre el primer A... avanza sobre el segundo A... ¡y GIRA hacia B! ¡Perfecto! ¡Descifraron el primer secreto del templo! ¡Bravo!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 1 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 13** "¡Éxito K2!". Anima a poner a Kinderbot al inicio del patrón AABAA y presionar 'Go'. Observar si completa los 5 pasos. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Exploradores K2! ¡Kinderbot al inicio del camino AABAA! ¿Listos con su código de 5 pasos? ¡Presionen 'Go'! ¡Sigamos la secuencia! A... A... Gira... B... Gira... ¡Fantástico! ¡Siguieron el patrón extendido! ¡La puerta secreta seguro se está abriendo! ¡Genial!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 1 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 14** "¡Éxito K3!". Anima a poner a Kinderbot al inicio del patrón ABBABB y presionar 'Go'. Observar si completa los 6 pasos. Confirmar predicción. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros K3! ¡Kinderbot listo al inicio del camino ABBABB! ¿Preparados con su código de 6 pasos? ¡Presionen 'Go'! ¡Veamos si funciona! A... Gira... B... B... Gira... A... ¡IMPRESIONANTE! ¡Lo lograron! ¡Y recordaron que después venía un 'B'! ¡Han descifrado el código completo del Templo Perdido! ¡Son unos verdaderos exploradores!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7: Mensaje del Cuartel (Omitida para Misión 33) -->
+
+<!-- Actividad 8: Conclusión y Reflexión -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🏁 Actividad 8: ¡Tesoro Encontrado y Reflexión! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Cerrar la historia celebrando el éxito, reforzar los patrones AAB/ABB y reflexionar sobre la importancia de observar el orden.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 15** "¡Misión Cumplida!". Cierra la historia (puerta abierta, tesoro encontrado). Realiza preguntas de reflexión.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡LO LOGRAMOS, EXPLORADORES! ¡Gracias a que siguieron el patrón secreto AAB o ABB a la perfección, la puerta mágica del Templo Perdido se ha abierto! ¡Y adentro encontramos... un cofre lleno de brillantes Gnius-Monedas de chocolate! ¡Misión súper cumplida! Pensemos en nuestra aventura:
+1. ¿Cómo era el patrón secreto de hoy? ¿Era igual al del Jardín Mágico (AB)? (No, era AAB o ABB).
+2. ¿Por qué era importante que Kinderbot siguiera los pasos EXACTAMENTE en el orden del patrón? (Para abrir la puerta / Para no activar trampas).
+3. ¿Les gustó ser detectives y encontrar estos patrones un poco más difíciles?
+¡Cada día se vuelven mejores programadores y detectores de patrones! ¡Felicidades, CODE SQUAD! ¡Hasta la próxima exploración!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+        <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var parentActivity = content.closest('.activity');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            parentActivity.classList.remove('active');
+        } else {
+            content.style.display = "block";
+            parentActivity.classList.add('active');
+        }
+    }
+
+    function updateContent() {
+        var level = document.getElementById("class-level").value;
+        var levelText = document.getElementById("class-level").options[document.getElementById("class-level").selectedIndex].text;
+        document.getElementById("selected-level").innerText = "Nivel: " + levelText;
+
+        var k1Contents = document.querySelectorAll('.k1-content');
+        var k2Contents = document.querySelectorAll('.k2-content');
+        var k3Contents = document.querySelectorAll('.k3-content');
+
+        k1Contents.forEach(function(el) { el.style.display = 'none'; });
+        k2Contents.forEach(function(el) { el.style.display = 'none'; });
+        k3Contents.forEach(function(el) { el.style.display = 'none'; });
+
+        var selectedContents = document.querySelectorAll('.' + level.toLowerCase() + '-content');
+        selectedContents.forEach(function(el) {
+             el.style.display = 'table-row';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+    });
+</script>
+
+</body>
+</html>
